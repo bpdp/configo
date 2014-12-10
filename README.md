@@ -5,7 +5,7 @@ Configo is configuration parser for Go. It uses [TOML](https://github.com/toml-l
 # License
 
 ~~~
-Copyright 2013, Bambang Purnomosidi D. P.
+Copyright 2015, Bambang Purnomosidi D. P.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
