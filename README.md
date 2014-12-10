@@ -1,8 +1,8 @@
-* Configo
+# Configo
 
-Configo is configuration parser for Go. It uses TOML as config file format.
+Configo is configuration parser for Go. It uses [TOML](https://github.com/toml-lang/toml) as config file format. There are some Go parser for TOML, but I prefer TOML parser library from [Naoya Inada](https://github.com/naoina/toml)
  
-* License
+# License
 
 ~~~
 Copyright 2013, Bambang Purnomosidi D. P.
@@ -20,6 +20,6 @@ Copyright 2013, Bambang Purnomosidi D. P.
    limitations under the License.
 ~~~
 
-* Author
+# Author
 
 [Bambang Purnomosidi D. P.](http://bpdp.name)
