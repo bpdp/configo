@@ -2,6 +2,37 @@
 
 Configo is configuration parser for Go. It uses [TOML](https://github.com/toml-lang/toml) as config file format. There are some Go parser for TOML, but I prefer TOML parser library from [Naoya Inada](https://github.com/naoina/toml)
  
+# Usage
+
+Basically, you just create a TOML file and put it inside any location you like, example:
+
+`conf/myproject.toml`
+
+~~~
+title="My project"
+port=":8123"
+~~~
+
+Here's the Go source code to get the "port" configuration:
+
+~~~go
+package main
+
+import (
+	"fmt"
+	"github.com/bpdp/configo"
+)
+
+func main() {
+
+	// relative to current dir
+	var config = configo.ReadConfig("conf/myproject.toml")
+
+	fmt.Println("port: " + config.Port)
+
+}
+~~~
+
 # License
 
 ~~~
