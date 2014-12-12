@@ -1,3 +1,5 @@
+// Package configo provides some functions to handle configuration
+// file in TOML format
 package configo
 
 import (
@@ -6,15 +8,10 @@ import (
 	"os"
 )
 
-type Config struct {
-	Title string
-	Port  string
-}
+// ReadConfig reads from config file
+func ReadConfig(configFile string, o interface{}) (err error) {
 
-// Reads info from config file
-func ReadConfig(confFile string) Config {
-
-	f, err := os.Open(confFile)
+	f, err := os.Open(configFile)
 	if err != nil {
 		panic(err)
 	}
@@ -23,10 +20,11 @@ func ReadConfig(confFile string) Config {
 	if err != nil {
 		panic(err)
 	}
-	var config Config
-	if err := toml.Unmarshal(buf, &config); err != nil {
+
+	if err := toml.Unmarshal(buf, o); err != nil {
 		panic(err)
 	}
 
-	return config
+	return err
+
 }

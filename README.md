@@ -23,14 +23,23 @@ import (
 	"github.com/bpdp/configo"
 )
 
+type Config struct {
+	Title string
+	Port  string
+}
+
 func main() {
 
-	// relative to current dir
-	var config = configo.ReadConfig("conf/myproject.toml")
+	var cnf Config
 
-	fmt.Println("port: " + config.Port)
+	if err := configo.ReadConfig("conf/lapmachine.toml", &cnf); err != nil {
+		fmt.Println("Config Load Error: %g", err)
+	}
+
+	fmt.Println("Title: " + cnf.Title + ", Port: " + cnf.Port)
 
 }
+
 ~~~
 
 # License
