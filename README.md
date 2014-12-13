@@ -42,6 +42,15 @@ func main() {
 
 ~~~
 
+Inside the project directory:
+
+~~~bash
+$ export GOPATH=`pwd`
+$ go get github.com/bpdp/configo
+~~~
+
+As usual, the package will be installed in `src/github.com/bpdp/configo` and you can start coding.
+
 # License
 
 ~~~
