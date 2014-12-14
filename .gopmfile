@@ -1,0 +1,5 @@
+[target]
+path = github.com/bpdp/configo
+
+[deps]
+github.com/naoina/toml = branch:master
