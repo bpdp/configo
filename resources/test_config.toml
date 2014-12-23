@@ -1,0 +1,3 @@
+title="Test Configo"
+port=":8123"
+staticdir="assets/"
