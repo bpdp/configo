@@ -51,6 +51,22 @@ $ go get github.com/bpdp/configo
 
 As usual, the package will be installed in `src/github.com/bpdp/configo` and you can start coding.
 
+# Development
+
+Install [Go Package Manager - gopm](https://github.com/gpmgo/gopm).
+
+## Building
+
+~~~bash
+gopm build
+~~~
+
+## Testing
+
+~~~bash
+gopm test
+~~~
+
 # License
 
 ~~~
